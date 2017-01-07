@@ -64,7 +64,7 @@ $ opam install git
   - A [unix filesystem](http://mirage.github.io/ocaml-git/Git_unix.S.FS.html)
     implementation;
   - A [mirageOS](http://mirage.github.io/ocaml-git/Git_mirage.html) implementation,
-    requiring an `V1_LWT.FS` implementation.
+    requiring an `Mirage_types_lwt.FS` implementation.
 
 ### What is *not* supported
 

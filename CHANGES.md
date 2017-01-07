@@ -294,7 +294,7 @@
 
 ### 1.2.0: (2014-06-10)
 
-* Can consume Mirage's `V1_LWT.FS` signature to generate a
+* Can consume Mirage's `Mirage_types_lwt.FS` signature to generate a
   persistent store. This allows to store Git repos directly
   inside raw block devices (no need of filesystem anymore).
 * Minor API refactoring to abstract the Unix layer cleanly.

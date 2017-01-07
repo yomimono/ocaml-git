@@ -22,7 +22,7 @@ module Log = struct
 end
 
 module type FS = sig
-  include V1_LWT.FS with type page_aligned_buffer = Cstruct.t
+  include Mirage_types_lwt.FS with type page_aligned_buffer = Cstruct.t
   val connect: unit -> t Lwt.t
   val string_of_error: error -> string
 end
@@ -157,7 +157,7 @@ module FS (FS: FS) (D: Git.Hash.DIGEST) (I: Git.Inflate.S) = struct
 
 end
 
-module IO_helper (Channel: V1_LWT.CHANNEL) = struct
+module IO_helper (Channel: Mirage_types_lwt.CHANNEL) = struct
 
   let write oc s =
     let buf = Cstruct.of_string s in
